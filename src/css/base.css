@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Roboto";
+  src: url(/public/font/Roboto/Roboto-VariableFont_wdth\,wght.ttf);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 /* 
   font-family: "Playfair Display", serif;
@@ -205,7 +215,7 @@
 
 body {
   background-color: #F4F1EA ;
-  font-family: "Playfair Display", serif;
+  font-family: "Roboto";
   color: #333;
 }
 
