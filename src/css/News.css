@@ -1,0 +1,96 @@
+.news-wrap figure {
+  margin-bottom: 8px;
+  border: 4px solid #5C4033;
+}
+
+.news-wrap {
+  display: flex;
+  gap: 16px;
+  max-width: 912px;
+  margin: auto;
+}
+
+.news-caterogy {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-top: 32px;
+}
+
+.news-caterogy button {
+  width: fit-content;
+  border: none;
+  background-color: transparent;
+  font-family: "Roboto";
+  font-weight: 700;
+  text-align: start;
+  color: #3B302F ;
+}
+
+.news-list {
+  max-width: 751px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+  padding-bottom: 32px;
+  margin-left: 161px;
+  padding-left: 16px;
+  border-left: 4px solid #5C4033;
+}
+
+.news-item h2 {
+  margin-bottom: 8px;
+  font-family: "Playfair Display";
+  font-size: 40px;
+}
+
+.news-text {
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+  line-height: 150%;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+/* 첫 번째 뉴스 */
+.news-item-first {
+  max-width: 100%;
+}
+
+.news-item-first img {
+  width: 731px;
+}
+
+/* 나머지 뉴스 */
+.news-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  width: 731px;
+}
+
+.news-grid .news-item {
+  width: 383px;
+}
+
+.news-grid .news-item h2 {
+  font-size: 28px;
+}
+
+.news-grid .news-item img {
+  width: 383px;
+}
+
+.news-item:nth-child(2n) {
+  width: 332px;
+}
+
+.news-item:nth-child(2n) img {
+  width: 332px;
+}
+
+

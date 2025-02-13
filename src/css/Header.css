@@ -1,12 +1,12 @@
 @font-face {
-  font-family: "Playfair Display", serif;
+  font-family: "Playfair Display";
   src: url(/public/font/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf);
   font-optical-sizing: auto;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "Libre Barcode 39", serif;
+  font-family: "Libre Barcode 39";
   src: url(/public/font/Libre_Barcode_39/LibreBarcode39-Regular.ttf);
   font-weight: 400;
   font-style: normal;
@@ -25,55 +25,56 @@ header .inner {
   width: 100%;
 }
 
-.inner + .line {
+header .inner + .line {
   width: 100%;
   height: 8px;
   margin-bottom: 4px;
-  background-color: #DEDEDE;
+  background-color: #704214;
 }
 
-.inner + .line +.line {
+header .inner + .line +.line {
   width: 100%;
   height: 4px;
-  background-color: #DEDEDE;
+  background-color: #5C4033;
 }
 
-.title {
+header .title {
   margin-bottom: .5rem;
-  font-family: "Playfair Display", serif;
+  font-family: "Playfair Display";
   font-size: calc(80px + 1vw);
   font-weight: 800;
 }
 
-.day {
-  font-family: "Playfair Display", serif;
+header .day {
+  font-family: "Playfair Display";
   font-weight: 700;
 }
 
-.m-title {
+header .m-title {
   font-size: 14px;
 }
 
-.m-data {
+header .m-data {
+  margin-bottom: 8px;
   font-size: 28px;
 }
 
-.right {
+header .right {
   text-align: end;
 }
 
-.text {
+header .text {
   max-width: 332px;
   margin-bottom: 1rem;
   font-size: 12px;
-  line-height: 130%;
+  line-height: 150%;
 }
 
-.symbols {
+header .symbols {
   font-size: 20px;
 }
 
-.barcode {
+header .barcode {
   margin-top: 1rem;
   font-family: "Libre Barcode 39", serif;
   font-size: 40px;

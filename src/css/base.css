@@ -216,7 +216,7 @@
 body {
   background-color: #F4F1EA ;
   font-family: "Roboto";
-  color: #333;
+  color: #3B302F ;
 }
 
 a {
@@ -238,3 +238,15 @@ ul {
   list-style: none;
 }
 
+button {
+  cursor: pointer;
+}
+
+.wrap {
+  display: flex;
+  gap: 16px;
+}
+
+.left-inner {
+  margin-left: 32px;
+}
