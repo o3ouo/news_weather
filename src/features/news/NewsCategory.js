@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-function Category({ onSelect }) {
+function NewsCategory({ onSelect }) {
   const categories = [
     { id: 1, name:'all', text: 'ALL' },
     { id: 2, name:'top', text: 'TOP' },
@@ -34,4 +34,4 @@ function Category({ onSelect }) {
   );
 }
 
-export default Category;
+export default NewsCategory;

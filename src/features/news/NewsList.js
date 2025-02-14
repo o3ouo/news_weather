@@ -1,6 +1,4 @@
-import React, { useState } from 'react';
 import { useProductQuery } from './useProduct';
-import { Link, useSearchParams } from 'react-router-dom';
 import NewsItem from './NewsItem';
 
 const NewsList = ({ category }) => {

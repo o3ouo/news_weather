@@ -14,4 +14,4 @@ export const useProductQuery = (category) => {
     gcTime: 60000,
     staleTime: 30000,
   });
-}
+};

@@ -1,8 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useQuery } from "@tanstack/react-query";
 import '../../css/Weather.css';
-
+import { fetchCurrentWeather, fetchHourlyWeather } from "./WeatherAPI";
 
 function Weather() {
+  const [location, setLocation] = useState({lat: null, lon: null});
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition((position) => {
+      setLocation({
+        lat: position.coords.latitude,
+        lon: position.coords.longitude,
+      });
+    });
+  }, []);
+
+  const { data: currentData, error: currentError, isLoading: currentLoading } = useQuery({
+    queryKey: ["currentWeather", location.lat, location.lon],
+    queryFn: fetchCurrentWeather,
+    enabled: !!location.lat && !!location.lon,
+  });
+
+  const { data: hourlyData, error: hourlyError, isLoading: hourlyLoading } = useQuery({
+    queryKey: ["hourlWeather", location.lat, location.lon],
+    queryFn: fetchHourlyWeather,
+    enabled: !!location.lat && !!location.lon,
+  });
+
+  // 비 올 확률 계산 함수
+
+  if (currentLoading || hourlyLoading) return <p>Loading weather information...</p>
+  if (currentError || hourlyError) return <p>Failed to load weather information.</p>
+
   return (
     <div className="weather-wrap">
       <h2 className="title">WEATHER FORECAST</h2>

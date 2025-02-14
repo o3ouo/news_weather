@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from 'react';
 import '../../css/News.css';
-import Category from './Category';
+import NewsCategory from './NewsCategory';
 import NewsList from './NewsList';
 
 function News() {
@@ -11,7 +11,7 @@ function News() {
 
   return (
     <div className="news-wrap">
-      <Category onSelect={onSelect}/>
+      <NewsCategory onSelect={onSelect}/>
       <NewsList category={category}/>
     </div>
   );
