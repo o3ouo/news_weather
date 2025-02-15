@@ -1,37 +1,35 @@
 import React from 'react';
 
-const WeatherInfo = React.memo(({ currentData, maxTemp, minTemp }) => {
-  if (!currentData) {
-    return <div className="weather-info">Loading weather data...</div>;
-  }
+function WeatherInfo({ currentData, todayTemperatureStats }) {
+  if (!currentData) return <p>No weather data available</p>;
 
-  const cityName = currentData?.name || "Unknown Location";
-  const weatherDescription = currentData?.weather?.[0]?.description || "No data available";
-  const weatherIcon = currentData?.weather?.[0]?.icon ? `/icon/${currentData.weather[0].icon}.png` : "/icon/default.png";
-  const temperatureC = currentData?.main?.temp ? Math.round(currentData.main.temp) : "--";
-  const temperatureF = currentData?.main?.temp ? Math.round(currentData.main.temp * 9 / 5) + 32 : "--";
+  // currentData에서 필요한 정보를 구조 분해
+  const { name, main, weather } = currentData;
+  const weatherMain = weather[0].main;
+  // 아이콘 URL: OpenWether에서 받은 아이콘 코드로 로컬 아이콘 결로 사용
+  const weatherIcon = weather[0]?.icon ? `/icon/${weather[0].icon}.png` : "/icon/default.png";
 
   return (
     <div className="weather-info">
       <div className="left">
-        <h3 className="city">{cityName}</h3>
-        <p className="w-condition">{weatherDescription}</p>
+        <h3 className="city">{name}</h3>
+        <p className="w-condition">{weatherMain}</p>
       </div>
       <figure className="weather-icon">
-        <img src={weatherIcon} alt="weather-icon" />
+        <img src={weatherIcon} alt={weatherMain} />
       </figure>
       <div className="right">
         <div className="h-l">
-          <span className="h">H: {maxTemp}°</span>
-          <span className="l">L: {minTemp}°</span>
+          <span className="h">H: {todayTemperatureStats.maxTemp}°</span>
+          <span className="l">L: {todayTemperatureStats.minTemp}°</span>
         </div>
         <div className="temperature">
-          <p className="c">{temperatureC}℃</p>
-          <p className="f">{temperatureF}℉</p>
+          <p className="c">{Math.round(main.temp)}℃</p>
+          <p className="f">{Math.round(main.temp * 9 / 5) + 32}℉</p>
         </div>
       </div>
     </div>
   );
-});
+}
 
 export default WeatherInfo;

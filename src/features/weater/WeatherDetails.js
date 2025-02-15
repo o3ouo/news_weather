@@ -1,38 +1,44 @@
 import React from 'react';
 
-const WeatherDetails = React.memo(({ rainProbability, humidity, windSpeed }) => {
+function WeatherDetails({ currentData, dailyRainProbability }) {
+  if (!currentData || !currentData.main) {
+    return <p>Loading weather data...</p>;
+  }
 
   return (
     <div className="weather-details">
-      <div className="rain-wrap">
+      {/* 강수 정보 */}
+      <div className="rain-wrap con">
         <figure className="rain-icon">
           <img src="/icon/rain.png" alt="rain-icon" />
         </figure>
         <div className="text">
           <p className="name">RAIN</p>
-          <p className="value">{rainProbability}%</p>
+          <p className="value">{dailyRainProbability}%</p>
         </div>
       </div>
-      <div className="hum-wrap">
+      {/* 습도 정보 */}
+      <div className="hum-wrap con">
         <figure className="hum-icon">
-          <img src="/icon/hum.png" alt="hum-icon" />
+          <img src="/icon/hum.png" alt="humidity-icon" />
         </figure>
         <div className="text">
           <p className="name">HUM</p>
-          <p className="value">{humidity}%</p>
+          <div className="value">{currentData.main.humidity}%</div>
         </div>
       </div>
-      <div className="wind-wrap">
+      {/* 바람 정보 */}
+      <div className="wind-wrap con">
         <figure className="wind-icon">
           <img src="/icon/wind.png" alt="wind-icon" />
         </figure>
         <div className="text">
           <p className="name">WIND</p>
-          <p className="value">{windSpeed} m/s</p>
+          <p className="value">{currentData.wind.speed} m/s</p>
         </div>
       </div>
     </div>
   );
-});
+}
 
 export default WeatherDetails;

@@ -1,14 +1,18 @@
 import React from 'react';
 
-const HourlyForecast = React.memo(({ hourlyData }) => {
+function HourlyForecast({ hourlyData }) {
+  if (!hourlyData?.list) return <p>No hourly forecast available</p>;
+
   return (
-    <div className="today-time">
+    <div className="hourly-forecast">
       <ul>
-        {hourlyData?.list?.slice(0, 5).map((hour, index) => (
-          <li key={index}>
+        {hourlyData.list.slice(0, 5).map((hour) => (
+          <li key={hour.dt}>
+            {/* 시간 정보: dt_txt에서 시간 부분 추출 */}
             <p className="time">{hour.dt_txt.substring(11, 16)}</p>
             <figure className="time-icon">
-              <img src="/icon/sun-wind.png" alt="sun-wind-icon" />
+              {/* 시간대별 날씨 아이콘 */}
+              <img src={hour.dt_txt} alt={hour.dt_txt} />
             </figure>
             <p className="celsius">{Math.round(hour.main.temp)}℃</p>
           </li>
@@ -16,6 +20,6 @@ const HourlyForecast = React.memo(({ hourlyData }) => {
       </ul>
     </div>
   );
-});
+}
 
 export default HourlyForecast;

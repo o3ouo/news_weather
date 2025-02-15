@@ -1,5 +1,87 @@
 .weather-wrap {
-  max-width: 448px;
+  width: 448px;
+  margin-top: 30px;
   border: 4px solid #5C4033;
+  background-color: rgba(112, 66, 20, .5);
 }
 
+.weather-wrap .title {
+  width: 100%;
+  margin: 16px 0;
+  font-family: "Playfair Display";
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.weather-wrap .search-bar {
+  position: relative;
+  padding: 0 16px;
+}
+
+.weather-wrap .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  transform: translateY(-50%);
+}
+
+.weather-wrap input {
+  width: 100%;
+  height: 60px;
+  padding-left: 48px;
+  border: none;
+  outline: none;
+  background-color: rgb(92, 64, 51, .5);
+  color: #3B302F;
+}
+
+.weather-wrap input::placeholder {
+  font-family: "Roboto";
+  font-size: 16px;
+  color: #3B302F;
+}
+
+.weather-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:  0 16px;
+}
+
+.weather-info .city {
+  margin-bottom: 16px;
+  font-size: 32px;
+}
+
+.weather-info .w-condition {
+  font-size: 28px;
+  text-align: center;
+}
+
+.weather-info .weather-icon {
+  /* margin-left: 41px;
+  margin-right: 19px; */
+}
+
+.weather-details {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  margin-bottom: 28px;
+  padding: 0 16px;
+}
+
+.weather-details .con {
+  display: flex;
+  gap: 16px;
+}
+
+.weather-details .name {
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+.weather-details .value {
+  font-weight: 700;
+}

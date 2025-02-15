@@ -245,6 +245,7 @@ button {
 .wrap {
   display: flex;
   gap: 16px;
+  justify-content: center;
 }
 
 .left-inner {
