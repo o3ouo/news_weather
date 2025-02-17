@@ -6,8 +6,6 @@ function WeatherInfo({ currentData, todayTemperatureStats }) {
   // currentData에서 필요한 정보를 구조 분해
   const { name, main, weather } = currentData;
   const weatherMain = weather[0].main;
-  // 아이콘 URL: OpenWether에서 받은 아이콘 코드로 로컬 아이콘 결로 사용
-  const weatherIcon = weather[0]?.icon ? `/icon/${weather[0].icon}.png` : "/icon/default.png";
 
   return (
     <div className="weather-info">
@@ -16,7 +14,7 @@ function WeatherInfo({ currentData, todayTemperatureStats }) {
         <p className="w-condition">{weatherMain}</p>
       </div>
       <figure className="weather-icon">
-        <img src={weatherIcon} alt={weatherMain} />
+        <img src={ `/icon/${weather[0].icon}.png`} alt={weatherMain} />
       </figure>
       <div className="right">
         <div className="h-l">
@@ -24,8 +22,8 @@ function WeatherInfo({ currentData, todayTemperatureStats }) {
           <span className="l">L: {todayTemperatureStats.minTemp}°</span>
         </div>
         <div className="temperature">
-          <p className="c">{Math.round(main.temp)}℃</p>
-          <p className="f">{Math.round(main.temp * 9 / 5) + 32}℉</p>
+          <p className="c">{Math.round(main.temp)}<sup>℃</sup></p>
+          <p className="f">{Math.round(main.temp * 9 / 5) + 32}<sup>℉</sup></p>
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@
 .weather-wrap .title {
   width: 100%;
   margin: 16px 0;
-  font-family: "Playfair Display";
+  font-family: "Playfair Display-Bold";
   font-size: 28px;
   font-weight: 700;
   text-align: center;
@@ -37,11 +37,13 @@
 }
 
 .weather-wrap input::placeholder {
-  font-family: "Roboto";
+  font-family: "Roboto-Regula";
   font-size: 16px;
   color: #3B302F;
 }
 
+
+/* Weather-info */
 .weather-info {
   display: flex;
   align-items: center;
@@ -51,10 +53,12 @@
 
 .weather-info .city {
   margin-bottom: 16px;
+  font-family: "Roboto-Bold";
   font-size: 32px;
 }
 
 .weather-info .w-condition {
+  font-family: "Roboto-Regula";
   font-size: 28px;
   text-align: center;
 }
@@ -64,6 +68,26 @@
   margin-right: 19px; */
 }
 
+.weather-info .right {
+  text-align: center;
+}
+
+.weather-info .right .h {
+  margin-right: 4px;
+}
+
+.weather-info .right .temperature {
+  font-family: "Newsreader-ExtraBold";
+  font-size: 40px;
+}
+
+sup {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+/* Weather-details */
 .weather-details {
   display: flex;
   justify-content: space-between;
@@ -83,5 +107,16 @@
 }
 
 .weather-details .value {
-  font-weight: 700;
+  font-family: "Roboto-Medium";
+}
+
+
+/* Hourly-forecast */
+.hourly-forecast ul {
+  display: flex;
+  gap: 8px;
+}
+
+.hourly-forecast .time-icon {
+  max-width: 50px;
 }

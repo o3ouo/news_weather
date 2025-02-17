@@ -1,5 +1,5 @@
 .news-wrap figure {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
   border: 4px solid #5C4033;
 }
 
@@ -22,8 +22,7 @@
   width: fit-content;
   border: none;
   background-color: transparent;
-  font-family: "Roboto";
-  font-weight: 700;
+  font-family: "Roboto-Bold";
   text-align: start;
   color: #3B302F ;
 }
@@ -42,7 +41,7 @@
 
 .news-item h2 {
   margin-bottom: 8px;
-  font-family: "Playfair Display";
+  font-family: "Playfair Display-Bold";
   font-size: 40px;
 }
 
@@ -59,7 +58,7 @@
 /* 첫 번째 뉴스 */
 .news-item-first {
   max-width: 100%;
-}
+}             
 
 .news-item-first img {
   width: 731px;
@@ -75,21 +74,28 @@
 
 .news-grid .news-item {
   width: 383px;
+  height: 363px;
 }
 
 .news-grid .news-item h2 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   font-size: 28px;
 }
 
 .news-grid .news-item img {
   width: 383px;
+  max-height: 210px;
+  object-fit: contain;
+  background-color: rgba(112, 66, 20, .5);
 }
 
-.news-item:nth-child(2n) {
+.news-grid .news-item:nth-child(2n) {
   width: 332px;
 }
 
-.news-item:nth-child(2n) img {
+.news-grid .news-item:nth-child(2n) img {
   width: 332px;
 }
 
