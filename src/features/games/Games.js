@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../css/Games.css';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import MoleApp from './whack-a-mole/MoleApp';
+import JKCatchApp from './jujutsu-kaisen/JKCatchApp';
 import MazeApp from './maze-game/MazeApp';
 import RPSApp from './rock-paper-scissors/RPSApp';
 import SudokuApp from './sudoku/SudokuApp';
@@ -13,7 +13,7 @@ function Games() {
 
         <nav className="gameBtnBox">
           <ul>
-            <li><Link to="/">Whack <br /> a <br /> Mole</Link></li>
+            <li><Link to="/">Jujutsu Kaisen <br /> Catch</Link></li>
             <li><Link to="/maze">Maze</Link></li>
             <li><Link to="/rps">Rock <br /> Paper <br /> Scissors</Link></li>
             <li><Link to="/sudoku">Sudoku</Link></li>
@@ -22,7 +22,7 @@ function Games() {
 
         <div className="games-view">
           <Routes>
-            <Route path="/" element={<MoleApp />} />
+            <Route path="/" element={<JKCatchApp />} />
             <Route path="/maze" element={<MazeApp />} />
             <Route path="/rps" element={<RPSApp />} />
             <Route path="/sudoku" element={<SudokuApp />} />
