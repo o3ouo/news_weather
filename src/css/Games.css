@@ -1,0 +1,24 @@
+.gameBtnBox ul {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.gameBtnBox li {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 16px;
+  border: 4px solid #5C4033;
+  background-color: rgba(112, 66, 20 .5);
+  font-family: "Playfair Display-Bold";
+  font-size: 18px;
+  text-align: center;
+  align-content: center;
+}
+
+.games-view {
+  width: 448px;
+  padding: 1rem;
+  border: 4px solid #5C4033;
+  background-color: rgba(112, 66, 20 .5);
+}

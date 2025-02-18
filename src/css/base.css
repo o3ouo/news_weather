@@ -281,6 +281,13 @@ button {
   cursor: pointer;
 }                                              
 
+hr {
+  height: 4px;
+  margin: 16px 0;
+  border: none;
+  background-color: #704214;
+}
+
 sup {
   vertical-align: super;
 }

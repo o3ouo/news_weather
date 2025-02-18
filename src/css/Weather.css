@@ -1,6 +1,7 @@
 .weather-wrap {
   width: 448px;
   margin-top: 30px;
+  padding-bottom: 8px;
   border: 4px solid #5C4033;
   background-color: rgba(112, 66, 20, .5);
 }
@@ -110,13 +111,42 @@ sup {
   font-family: "Roboto-Medium";
 }
 
+/* days */
+.days {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.days .today,
+.days .nextBtn {
+  font-family: "Roboto-Bold";
+  font-size: 18px;
+}
+
+.days .nextBtn {
+  display: block;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+}
 
 /* Hourly-forecast */
 .hourly-forecast ul {
   display: flex;
+  justify-content: space-between;
   gap: 8px;
+  padding: 8px 16px;
+}
+
+.hourly-forecast li {
+  padding: 8px 16px;
+  text-align: center;
+  background-color: rgb(92, 64, 51, .5);
+  color: #F4F1EA;
 }
 
 .hourly-forecast .time-icon {
   max-width: 50px;
-}
+  margin: 2px 0;
+} 

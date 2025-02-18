@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../components/Header';
 import News from '../features/news/News';
 import Weather from '../features/weater/Weather';
+import Games from '../features/games/Games';
 
 function Home() {
   return (
@@ -12,6 +13,8 @@ function Home() {
       </div>
       <div className="right-inner">
         <Weather />
+        <hr />
+        <Games />
       </div>
 
     </div>

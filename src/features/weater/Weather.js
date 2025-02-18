@@ -58,6 +58,12 @@ function Weather() {
         currentData={activeWeatherData}
         dailyRainProbability={dailyRainProbability}
       />
+      {/* Next 7 Days */}
+      <div className="days">
+        <p className="today">Today</p>
+        <button type='button' className="nextBtn">Next 7 Days &gt; </button>
+      </div>
+      
       {/* HourlyForecast 컴포넌트에 시간대별 날씨와 아이콘 정보를 전달 */}
       <HourlyForecast hourlyData={activeHourlyData} />
     </div>
