@@ -1,4 +1,5 @@
 import React from 'react';
+import './MazeApp.css';
 
 function MazeApp() {
   return (

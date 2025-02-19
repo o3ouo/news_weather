@@ -1,6 +1,22 @@
 /* 게임 전체를 감싸는 div */
 .jk-catch-wrap {
+  position: relative;
   text-align: center; /* 가운데 정렬 */
+}
+
+.jk-catch-wrap .bg {
+  position: absolute;
+  opacity: .3;
+  z-index: -1;
+}
+
+.jk-catch-wrap .bg img {
+  object-fit: none;
+}
+
+.jk-catch-wrap .inner {
+  padding: 16px;
+  padding-bottom: 24px;
 }
 
 .jk-catch-wrap h1 {
@@ -11,50 +27,153 @@
   margin: auto;
 }
 
+.jk-catch-wrap .info {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  font-family: "Roboto-Bold";
+  font-size: 24px;
+}
+
 /* character-board */
 .character-board {
   display: grid;
   grid-template-columns: repeat(3, 100px);
   gap: 16px;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 /* .character-hole */
 .character-hole {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  justify-self: center;
   width: 100px;
   height: 100px;
-  border-radius: 10%;
-  background-color: #5C4033;
-  transition: background 0.2s; /* 배경색 부드럽게 전환 */
+  border: 4px solid #5C4033;
+  border-radius: 10px;
   cursor: pointer;
+}
+
+@keyframes characterAppear {
+  from {
+    transform: scale(.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.character-image {
+  animation: characterAppear 0.3s ease-in;
 }
 
 .game-buttons {
   display: flex;
-  margin-top: 20px;
+  justify-content: center;
+  margin-top: 16px;
+  font-family: "Roboto-Medium";
 }
 
 .game-buttons button {
   display: block;
-  padding: 10px 20px;
-  margin: 5px;
-  border: 4px solid #5C4033;
-  background-color: transparent;
+  width: 100px;
+  height: 50px;
+  border: none;
+  background-color: #5c4033;
   font-family: inherit;
-  font-size: 16px;
+  font-size: 14px;
+  color: #F4F1EA;
   cursor: pointer;
 }
 
-.game-buttons button:not(:nth-child(2)):hover {
+.game-buttons button:not(:last-child):hover {
   background-color:  rgba(92, 64, 51, .5);
-  color: #fff;
+  color: #F4F1EA;
 }
 
 .game-buttons button:disabled {
   background-color: rgba(92, 64, 51, .5);
   cursor: not-allowed;
+}
+
+/* popup */
+.popup-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(92, 64, 51, .3);
+  backdrop-filter: blur(4px);
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 16px;
+  border: 8px solid #5C4033;
+  background-color: #F4F1EA;
+  line-height: 170%;
+}
+
+.pop-img {
+  margin: 8px auto;
+}
+
+.pop-title {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-size: 24px;
+}
+
+.popup .txt-target {
+  margin-bottom: 16px;
+}
+
+.score-box-list {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  font-family: "Roboto-Medium";
+}
+
+.score-box span {
+  align-content: center;
+}
+
+.score-box img {
+  width: 70px;
+}
+
+.popup .txt {
+  font-size: 14px;
+  text-align: start;
+}
+
+.popup .txt-tip {
+  margin-top: 32px; 
+  font-size: 12px;
+  line-height: 160%;
+}
+
+.popup .closeBtn {
+  display: block;
+  margin: 16px auto;
+  margin-top: 32px;
+  padding: 8px 12px;
+  /* border: 4px solid #5C4033; */
+  border: none;
+  background-color: #5c4033;
+  font-family: inherit;
+  color: #F4F1EA;
+}
+
+.popup .closeBtn:hover {
+  background-color: rgba(92, 64, 51, .5);
+  color: #5C4033;
 }

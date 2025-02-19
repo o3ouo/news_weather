@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import './JKCatchApp.css';
 import CharacterBoard from './CharacterBoard';
+import Popup from './Popup';
 
 function JKCatchApp() {
   const GAME_TIME = 30; // 게임 제한 시간 (초)
   const [score, setScore] = useState(0); // 점수 상태
   const [timeLeft, setTimeLeft] = useState(GAME_TIME); // 남은 시간
   const [gameRunning, setGameRunning] = useState(false); // 게임 실행 여부
+  const [openPopup, setOpenPopup] = useState(false); // 팝업창
 
   // 게임 타이머 관리
   useEffect(() => {
@@ -23,7 +25,7 @@ function JKCatchApp() {
   // 게임 시작 함수 
   const startGame = () => {
     if (gameRunning) return; // 이미 게임이 진행 중이면 아무 일도 하지 않음
-    
+
     setGameRunning(true);
   };
 
@@ -38,31 +40,55 @@ function JKCatchApp() {
     setTimeLeft(GAME_TIME);
     setGameRunning(false);
   };
-  
+
+  // 게임 방법 팝업창
+  const how = () => {
+    setOpenPopup(true);
+    document.body.style.overflow = "hidden";
+  };
+
+  console.log("OpenPopup", openPopup);
+
   return (
     <div className="jk-catch-wrap">
-      <h1>
-        <img src="/img/jujutsu_kaisen_logo.png" alt="jujutsu_kaisen_logo" />
-      </h1>
-      <p className="time-left">남은 시간: {timeLeft}초</p>
-      <p className="score">점수: {score}</p>
+      <figure className="bg">
+        <img src="/img/bg.jpg" alt="bg" />
+      </figure>
+      <div className="inner">
+        <h1>
+          <img src="/img/jujutsu_kaisen_logo.png" alt="jujutsu_kaisen_logo" />
+        </h1>
+        <div className="info">
+          <p className="time-left">Time left: {timeLeft}초</p>
+          <p className="score">Score: {score}</p>
+        </div>
 
-      <div className="game-buttons">
-        {/* 게임 시작 */}
-        <button type="button" onClick={startGame} disabled={gameRunning}> 
-          {gameRunning ? "Game In Progress..." : "Game Start" }
-        </button>
-        {/* 게임 중단 */}
-        <button type="button" onClick={stopGame} disabled={!gameRunning}>
-          Stop Game
-        </button>
-        {/* 게임 리셋 */}
-        <button type="button" onClick={resetGame} disabled={gameRunning}>
-          Reset Game
-        </button>
+
+
+        <div className="game-buttons">
+          {/* 게임 방법 팝업창 */}
+          <button type="button" className="how-to-paly" onClick={how}>How to <br/> Play</button>
+
+          {/* 게임 시작 */}
+          <button type="button" className="play" onClick={startGame} disabled={gameRunning}>
+            {gameRunning ? "Game In Progress..." : "PLAY"}
+          </button>
+          {/* 게임 리셋 */}
+          <button type="button" className="reset" onClick={resetGame} disabled={gameRunning}>
+            RESET
+          </button>
+          {/* 게임 중단 */}
+          <button type="button" className="stop" onClick={stopGame} disabled={!gameRunning}>
+            STOP
+          </button>
+        </div>
+
+        <CharacterBoard gameRunning={gameRunning} setScore={setScore} />
+
+        {openPopup ? <Popup setOpenPopup={setOpenPopup} /> : ""}
       </div>
 
-      <CharacterBoard gameRunning={gameRunning} setScore={setScore}/>
+
     </div>
   );
 }

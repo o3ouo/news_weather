@@ -245,7 +245,6 @@
   font-style: normal;
 }
 
-
 * {
   margin: 0;
   padding: 0;
@@ -256,6 +255,10 @@ body {
   background-color: #F4F1EA ;
   font-family: "Roboto-Regula";
   color: #3B302F ;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 a {

@@ -1,6 +1,6 @@
 .news-wrap figure {
   margin-bottom: 4px;
-  border: 4px solid #5C4033;
+  border: 2px solid #5C4033;
 }
 
 .news-wrap {
@@ -74,7 +74,6 @@
 
 .news-grid .news-item {
   width: 383px;
-  height: 363px;
 }
 
 .news-grid .news-item h2 {
@@ -86,8 +85,7 @@
 
 .news-grid .news-item img {
   width: 383px;
-  max-height: 210px;
-  object-fit: contain;
+  object-fit: cover;
   background-color: rgba(112, 66, 20, .5);
 }
 

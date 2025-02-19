@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Character from "./Character";
 
 function CharacterBoard({ gameRunning, setScore }) {
-  const NUM_CHARACTERS = 15; // 등장 가능한 위치 개수
+  const NUM_CHARACTERS = 12; // 등장 가능한 위치 개수
   const CHARACTER_APPEAR_CHANCE = 0.3; // 캐릭터 등장 확률
 
   const characterList = [
@@ -39,7 +39,7 @@ function CharacterBoard({ gameRunning, setScore }) {
       setCharacters((prevState) => 
         prevState.map(() => getRandomCharacter()) // 각 칸에 랜덤 캐릭터 배치
       );
-    }, 800); // 0.8초마다 갱신
+    }, 1000); // 1초마다 갱신
 
     return () => clearInterval(characterInterval);
   }, [gameRunning]);
