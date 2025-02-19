@@ -1,0 +1,45 @@
+.maze-wrap {
+  text-align: center;
+}
+
+.maze {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.maze-row {
+  display: flex;
+}
+
+/* .maze-cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+
+.maze-cell {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+.wall {
+  background-color: #000;
+}
+
+.exit {
+  background-color: greenyellow;
+}
+
+.fake-exit {
+  background-color: red;
+}
+
+.player {
+  font-size: 20px;
+}
