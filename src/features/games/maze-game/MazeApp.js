@@ -13,9 +13,9 @@ export default function App() {
 
   return (
     <div className="maze-wrap">
-      <h1>미로 찾기 게임 - 스테이지 {stage}</h1>
+      <h1>Maze Game - Stage {stage}</h1>
       {gameWon ? (
-        <div>
+        <div className="clear-box">
           <p className="win-message">🎉 스테이지 {stage} 클리어! 🎉</p>
           <button onClick={nextStage}>다음 스테이지</button>
         </div>

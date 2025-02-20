@@ -1,5 +1,23 @@
 .maze-wrap {
+  padding: 16px;
   text-align: center;
+}
+
+.maze-wrap h1 {
+}
+
+.maze-wrap .clear-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  min-height: 400px;
+  padding: 16px;
+}
+
+.maze-wrap .win-message {
+  margin-bottom: 16px;
 }
 
 .maze {
@@ -12,8 +30,8 @@
 }
 
 .maze-cell {
-  width: 30px;
-  height: 30px;
+  width: 10px;
+  height: 10px;
   border: 1px solid #ccc;
   display: flex;
   align-items: center;
@@ -29,5 +47,5 @@
 }
 
 .player {
-  font-size: 20px;
+  font-size: 10px;
 }

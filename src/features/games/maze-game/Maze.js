@@ -5,8 +5,8 @@ import useMazeGenerator from "./useMazeGenerator";
 // 현재 스테이지 정보와 플레이어가 출구에 도착하면 실행할 함수를 props로 받아옴
 export default function Maze({ stage, onWin }) {
   // 스테이지가 올라갈수록 미로 크기 점점 증가 (11, 13, 15...)
-  const rows = 11 + stage * 2;
-  const cols = 11;
+  const rows = 41 + stage * 2;
+  const cols = 41;
   const maze = useMazeGenerator(rows, cols); // 호출해 랜덤 미로 생성
   
   // 플레어어의 현재 위치를 (1, 1)에서 시작하도록 설정
