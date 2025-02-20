@@ -59,7 +59,7 @@ function JKCatchApp() {
           <img src="/img/jujutsu_kaisen_logo.png" alt="jujutsu_kaisen_logo" />
         </h1>
         <div className="info">
-          <p className="time-left">Time left: {timeLeft}초</p>
+          <p className="time-left">Time left: {timeLeft}<span>sec</span></p>
           <p className="score">Score: {score}</p>
         </div>
 

@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Player() {
-  return <div className="player">🐱</div>;
+  return <figure className="player"><img src="/img/gojo03.png" alt="player" /></figure>;
 }

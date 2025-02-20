@@ -197,6 +197,10 @@
   font-style: italic;
 }
 */
+@import url("https://use.typekit.net/uym5qpg.css");
+/* font-family: "ccmeanwhile", sans-serif;
+font-weight: 700;
+font-style: normal; */
 
 @font-face {
   font-family: "Roboto-Bold";
@@ -303,5 +307,9 @@ sup {
 
 .left-inner {
   margin-left: 32px;
+}
+
+.right-inner {
+  width: 448px;
 }
 

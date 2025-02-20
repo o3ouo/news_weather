@@ -7,15 +7,18 @@
   display: flex;
   gap: 16px;
   max-width: 912px;
+  height: 300vh;
   margin: auto;
 }
 
 .news-caterogy {
-  position: fixed;
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin-top: 32px;
+  height: 100vh;
+  padding-top: 32px;
 }
 
 .news-caterogy button {
@@ -34,7 +37,6 @@
   gap: 16px;
   margin-top: 16px;
   padding-bottom: 32px;
-  margin-left: 161px;
   padding-left: 16px;
   border-left: 4px solid #5C4033;
 }

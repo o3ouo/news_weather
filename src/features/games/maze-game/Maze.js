@@ -4,10 +4,16 @@ import useMazeGenerator from "./useMazeGenerator";
 
 // 현재 스테이지 정보와 플레이어가 출구에 도착하면 실행할 함수를 props로 받아옴
 export default function Maze({ stage, onWin }) {
-  // 스테이지가 올라갈수록 미로 크기 점점 증가 (11, 13, 15...)
-  const rows = 41 + stage * 2;
-  const cols = 41;
-  const maze = useMazeGenerator(rows, cols); // 호출해 랜덤 미로 생성
+  // 스테이지 제한
+  const limitedStage = stage < 5;
+
+  const rows = 11 + stage * 2;
+  const cols = limitedStage ? (11 + stage * 2) : 19;
+  const sizeStyle = limitedStage ? `${35 - (stage * 4)}px` : "21px"
+
+  // 호출해 랜덤 미로 생성
+  const maze = useMazeGenerator(rows, cols); 
+
   
   // 플레어어의 현재 위치를 (1, 1)에서 시작하도록 설정
   const [playerPos, setPlayerPos] = useState({ x: 1, y: 1 });
@@ -56,7 +62,7 @@ export default function Maze({ stage, onWin }) {
       {maze.map((row, y) => (
         <div key={y} className="maze-row">
           {row.map((cell, x) => (
-            <div key={x} className={`maze-cell ${cell === 1 ? "wall" : ""} ${cell === "E" ? "exit" : ""}`}>
+            <div key={x} className={`maze-cell ${cell === 1 ? "wall" : ""} ${cell === "E" ? "exit" : ""}`} style={{width: sizeStyle, height: sizeStyle}}>
               {playerPos.x === x && playerPos.y === y && <Player />}
             </div>
           ))}

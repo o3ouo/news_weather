@@ -1,7 +1,8 @@
 /* 게임 전체를 감싸는 div */
 .jk-catch-wrap {
   position: relative;
-  text-align: center; /* 가운데 정렬 */
+  font-family: "ccmeanwhile", sans-serif;
+  text-align: center;
 }
 
 .jk-catch-wrap .bg {
@@ -16,7 +17,7 @@
 
 .jk-catch-wrap .inner {
   padding: 16px;
-  padding-bottom: 24px;
+  padding-bottom: 20px;
 }
 
 .jk-catch-wrap h1 {
@@ -31,8 +32,13 @@
   display: flex;
   justify-content: center;
   gap: 16px;
-  font-family: "Roboto-Bold";
   font-size: 24px;
+  font-weight: 700;
+}
+
+.jk-catch-wrap .info span {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 /* character-board */
@@ -46,6 +52,7 @@
 
 /* .character-hole */
 .character-hole {
+  overflow: hidden;
   justify-self: center;
   width: 100px;
   height: 100px;
@@ -69,11 +76,14 @@
   animation: characterAppear 0.3s ease-in;
 }
 
+.character-image img {
+  object-fit: none;
+}
+
 .game-buttons {
   display: flex;
   justify-content: center;
   margin-top: 16px;
-  font-family: "Roboto-Medium";
 }
 
 .game-buttons button {

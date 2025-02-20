@@ -10,8 +10,8 @@ function Games() {
       <div className="games-wrap">
         <nav className="gameBtnBox">
           <ul>
-            <li><Link to="/">Jujutsu Kaisen <br /> Catch</Link></li>
-            <li><Link to="/maze">Maze</Link></li>
+            <li><Link to="/">Reaction <br /> Speed Game</Link></li>
+            <li><Link to="/maze">Maze Game</Link></li>
           </ul>
         </nav>
 

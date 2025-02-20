@@ -1,6 +1,8 @@
 .maze-wrap {
   padding: 16px;
+  font-family: "ccmeanwhile", sans-serif;
   text-align: center;
+
 }
 
 .maze-wrap h1 {
@@ -30,8 +32,8 @@
 }
 
 .maze-cell {
-  width: 10px;
-  height: 10px;
+  width: 30px;
+  height: 30px;
   border: 1px solid #ccc;
   display: flex;
   align-items: center;
@@ -43,9 +45,8 @@
 }
 
 .exit {
-  background-color: greenyellow;
+  background-image: url(/public/img/gojo05.png);
+  background-size: cover;
+  background-color: #016B93;
 }
 
-.player {
-  font-size: 10px;
-}
