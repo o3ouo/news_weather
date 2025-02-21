@@ -13,14 +13,19 @@ export default function App() {
 
   return (
     <div className="maze-wrap">
-      <h1>Maze Game - Stage {stage}</h1>
       {gameWon ? (
         <div className="clear-box">
-          <p className="win-message">🎉 스테이지 {stage} 클리어! 🎉</p>
-          <button onClick={nextStage}>다음 스테이지</button>
+          <p className="win-message">🎉 STAGE{stage} <span>CLEAR!</span> 🎉</p>
+          <button type="button" className="next-button" onClick={nextStage}>Next Stage</button>
+          <figure className="clear-img">
+            <img src="/img/clear-img.png" alt="clear-img" />
+          </figure>
         </div>
       ) : (
-        <Maze stage={stage} onWin={() => setGameWon(true)} />
+        <div className="stage-box">
+          <h1><span>Maze Game</span> - Stage {stage}</h1>
+          <Maze stage={stage} onWin={() => setGameWon(true)} />
+        </div>
       )}
     </div>
   );

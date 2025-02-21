@@ -13,7 +13,6 @@ function Home() {
       </div>
       <div className="right-inner">
         <Weather />
-        <hr />
         <Games />
       </div>
 

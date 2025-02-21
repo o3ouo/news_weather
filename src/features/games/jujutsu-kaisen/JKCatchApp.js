@@ -52,15 +52,12 @@ function JKCatchApp() {
   return (
     <div className="jk-catch-wrap">
       <figure className="bg">
-        <img src="/img/bg.jpg" alt="bg" />
+        <img src="/img/bg-img.png" alt="bg" />
       </figure>
       <div className="inner">
-        <h1>
-          <img src="/img/jujutsu_kaisen_logo.png" alt="jujutsu_kaisen_logo" />
-        </h1>
         <div className="info">
-          <p className="time-left">Time left: {timeLeft}<span>sec</span></p>
-          <p className="score">Score: {score}</p>
+          <p className="time-left"><span>Time:</span> {timeLeft}<span className="s">sec</span></p>
+          <p className="score"><span>Score:</span> {score}</p>
         </div>
 
 
