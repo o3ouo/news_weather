@@ -250,15 +250,29 @@ font-style: normal; */
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Barriecito";
+  src: url(/public/font/Barriecito/Barriecito-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+} */
+
 body {
   background-color: #F4F1EA ;
   font-family: "Roboto-Regula";
+  font-size: 14px;
   color: #3B302F ;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -289,28 +303,34 @@ button {
   cursor: pointer;
 }                                              
 
-hr {
-  height: 4px;
-  margin: 16px 0;
-  border: none;
-  background-color: #704214;
-}
-
 sup {
   vertical-align: super;
 }
 
 .wrap {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-}
-
-.left-inner {
-  margin-left: 32px;
+  position: relative;
+  max-width: 1440px;
+  margin: auto;
+  padding: 0 32px;
 }
 
 .right-inner {
+  position: absolute;
+  top: 0;
+  right: 32px;
   width: 448px;
 }
 
+.top-btn {
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 2px solid #5C4033;
+  background-color: rgb(112, 66, 20, .5);
+  font-family: "Barriecito";
+  font-size: 40px;
+  color: #F4F1EA;
+}

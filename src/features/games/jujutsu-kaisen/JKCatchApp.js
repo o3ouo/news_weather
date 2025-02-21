@@ -43,6 +43,7 @@ function JKCatchApp() {
 
   // 게임 방법 팝업창
   const how = () => {
+    setGameRunning(false);
     setOpenPopup(true);
     document.body.style.overflow = "hidden";
   };

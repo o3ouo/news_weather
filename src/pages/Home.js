@@ -7,8 +7,8 @@ import Games from '../features/games/Games';
 function Home() {
   return (
     <div className="wrap">
+      <Header />
       <div className="left-inner">
-        <Header />
         <News />
       </div>
       <div className="right-inner">
@@ -16,7 +16,9 @@ function Home() {
         <Games />
       </div>
 
+      <button className="top-btn">↑</button>
     </div>
+
   );
 }
 

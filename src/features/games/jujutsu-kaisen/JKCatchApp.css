@@ -22,7 +22,8 @@
 
 .jk-catch-wrap .info {
   display: flex;
-  justify-content: space-evenly;
+  gap: 32px;
+  justify-content: center;
   font-size: 32px;
   font-weight: 700;
 }
@@ -41,7 +42,7 @@
   grid-template-columns: repeat(3, 100px);
   gap: 16px;
   justify-content: center;
-  margin-top: 30px;
+  margin-top: 96px;
 }
 
 /* .character-hole */
@@ -66,41 +67,65 @@
   }
 }
 
-.character-image {
-  animation: characterAppear 0.3s ease-in;
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
+  75% { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
 }
+
+.character-image {
+  animation: characterAppear 0.3s ease-in-out;
+  filter: brightness(1.2);
+}
+
+.character-image:active {
+  animation: shake .2s ease-in-out
+}
+
 
 .character-image img {
   object-fit: none;
 }
 
 .game-buttons {
+  position: absolute;
   display: flex;
   justify-content: center;
+  width: 408px;
   margin-top: 16px;
 }
 
 .game-buttons button {
   display: block;
-  width: 100px;
+  width: 50%;
   height: 50px;
   border: none;
+  box-shadow: 3px 3px 3px black;
   background-color: #5c4033;
   font-family: inherit;
   font-size: 12px;
+  line-height: 140%;
   color: #F4F1EA;
   cursor: pointer;
+  transition-duration: .3s;
 }
 
-.game-buttons button:not(:last-child):hover {
-  background-color:  rgba(92, 64, 51, .5);
-  color: #F4F1EA;
+.game-buttons button:not(:disabled):hover {
+  margin-top: 5px;
+  margin-left: 5px;
+  box-shadow: none;
+  /* background-color:  rgba(92, 64, 51, .7);
+  color: #F4F1EA; */
 }
 
 .game-buttons button:disabled {
+  box-shadow: none;
   background-color: rgba(92, 64, 51, .5);
   cursor: not-allowed;
 }
+
 
 /* popup */
 .popup-bg {

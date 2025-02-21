@@ -5,10 +5,18 @@
 
 .news-wrap {
   display: flex;
-  gap: 16px;
-  max-width: 912px;
-  height: 300vh;
-  margin: auto;
+  gap: 24px;
+}
+
+.news-wrap .line {
+  width: 4px;
+  margin: 16px 0;
+  background-color: #704214;
+}
+
+.news-wrap figure {
+  margin-bottom: 4px;
+  border: 2px solid #5C4033;
 }
 
 .news-caterogy {
@@ -26,19 +34,18 @@
   border: none;
   background-color: transparent;
   font-family: "Roboto-Bold";
+  font-size: 16px;
   text-align: start;
   color: #3B302F ;
 }
 
 .news-list {
-  max-width: 751px;
+  max-width: 731px;
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin-top: 16px;
   padding-bottom: 32px;
-  padding-left: 16px;
-  border-left: 4px solid #5C4033;
 }
 
 .news-item h2 {

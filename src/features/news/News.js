@@ -12,6 +12,7 @@ function News() {
   return (
     <div className="news-wrap">
       <NewsCategory onSelect={onSelect}/>
+      <div className="line"></div>
       <NewsList category={category}/>
     </div>
   );

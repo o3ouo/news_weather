@@ -7,7 +7,7 @@ function GamesNav() {
       <ul>
         <li><Link to="/">Reaction <br /> Speed Game</Link></li>
         <li><Link to="/maze">Maze Game</Link></li>
-        <li><Link to="/lotto">Lotto Machine</Link></li>
+        <li><Link to="/lotto">Lotto <br /> Machine</Link></li>
       </ul>
     </nav>
   );
