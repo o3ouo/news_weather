@@ -55,7 +55,7 @@
 .news-item h2 {
   margin-bottom: 8px;
   font-family: "Playfair Display-Bold";
-  font-size: 40px;
+  font-size: 32px;
 }
 
 .news-text {
@@ -93,7 +93,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  font-size: 28px;
+  font-size: 18px;
 }
 
 .news-grid .news-item img {
