@@ -6,19 +6,17 @@ import Games from '../features/games/Games';
 
 function Home() {
   return (
-    <div className="wrap">
-      <Header />
-      <div className="left-inner">
-        <News />
+      <div className="wrap">
+        <Header />
+        <div className="left-inner">
+          <News />
+        </div>
+        <div className="right-inner">
+          <Weather />
+          <Games />  
+        </div>
+        <button className="top-btn">↑</button>
       </div>
-      <div className="right-inner">
-        <Weather />
-        <Games />
-      </div>
-
-      <button className="top-btn">↑</button>
-    </div>
-
   );
 }
 

@@ -64,3 +64,11 @@ header .barcode {
   font-size: 40px;
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+
+  header {
+    width: 100%;
+    max-width: none;
+  }
+
+}

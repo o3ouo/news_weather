@@ -1,11 +1,17 @@
 import './css/base.css';
+import { BrowserRouter } from 'react-router-dom';
 import Home from './pages/Home';
+import MediaHome from './pages/MediaHome';
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Home />
+        <MediaHome />
+      </div>
+    </BrowserRouter>
+
   );
 }
 

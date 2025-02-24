@@ -237,6 +237,12 @@ font-style: normal; */
 }
 
 @font-face {
+  font-family: "Newsreader-Bold";
+  src: url(/public/font/Newsreader/static/Newsreader_60pt-Bold.ttf);
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Playfair Display-Bold";
   src: url(/public/font/Playfair_Display/static/PlayfairDisplay-Bold.ttf);
   font-optical-sizing: auto;
@@ -314,6 +320,10 @@ sup {
   padding: 0 32px;
 }
 
+.left-inner {
+  width: fit-content;
+}
+
 .right-inner {
   position: absolute;
   top: 0;
@@ -333,4 +343,22 @@ sup {
   font-family: "Barriecito";
   font-size: 40px;
   color: #F4F1EA;
+}
+
+.media-wrap {
+  display: none;
+  max-width: 1024px;
+  margin: auto;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+
+  .wrap {
+    display: none;
+  }
+
+  .media-wrap {
+    display: block;
+  }
+
 }
