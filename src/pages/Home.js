@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/Header';
 import News from '../features/news/News';
-import Weather from '../features/weater/Weather';
+import Weather from '../features/weather/Weather';
 import Games from '../features/games/Games';
 
 function Home() {

@@ -5,7 +5,7 @@ function GamesNav() {
   return (
     <nav className="gameBtnBox">
       <ul>
-        <li><Link to="/games">Reaction <br /> Speed Game</Link></li>
+        <li><Link to="">Reaction <br /> Speed Game</Link></li>
         <li><Link to="/games/maze">Maze Game</Link></li>
         <li><Link to="/games/lotto">Lotto <br /> Machine</Link></li>
       </ul>

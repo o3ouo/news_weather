@@ -24,7 +24,6 @@ header .inner + .line +.line {
 }
 
 header .title {
-  margin-bottom: .5rem;
   font-family: "Newsreader-ExtraBold";
   font-size: calc(80px + 1vw);
   font-weight: 800;
@@ -41,6 +40,13 @@ header .m-title {
 header .m-data {
   margin-bottom: 8px;
   font-size: 28px;
+}
+
+header .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 8px;
 }
 
 header .right {
@@ -64,11 +70,62 @@ header .barcode {
   font-size: 40px;
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
+@media screen and (max-width: 1440px) {
 
   header {
-    width: 100%;
     max-width: none;
+    margin-top: 30px;
   }
 
+  header .inner {
+    max-width: 1024px;
+    margin: auto;
+    padding: 0 26px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  header .inner {
+    max-width: 768px;
+    padding: 0 24px;
+  }
+  
+  header .title {
+    font-size: calc(60px + 1vw);
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  header .inner {
+    max-width: 480px;
+    margin: 0;
+    padding: 0 16px;
+  }
+
+  header .left {
+    gap: 16px;
+    padding-bottom: 16px;
+  }
+
+  header .m-data {
+    margin-bottom: 0;
+  }
+
+  header .right {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  header .inner {
+    max-width: 320px;
+    padding: 0 14px;
+  }
+
+  header .title {
+    font-size: calc(50px + 1vw);
+  }
 }

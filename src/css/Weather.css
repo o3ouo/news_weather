@@ -150,3 +150,46 @@ sup {
   max-width: 50px;
   margin: 2px 0;
 } 
+
+@media screen and (max-width: 1440px) {
+
+  .weather-wrap {
+    max-width: 972px;
+    margin: auto;
+    margin-top: 26px;
+    border: none;
+    border-radius: 10px;
+    padding: 16px 0;
+  }
+
+  .weather-wrap .inner {
+    max-width: 416px;
+    margin: auto;
+  }
+
+  .weather-wrap .title {
+    margin: 0;
+  }
+
+  .weather-wrap .search-bar {
+    margin: 16px 0;
+  }
+
+  .weather-wrap input {
+    border-radius: 5px;
+  }
+
+  .hourly-forecast li {
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  .weather-wrap {
+    max-width: 720px;
+    margin-top: 24px;
+
+  }
+
+}

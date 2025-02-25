@@ -1,6 +1,6 @@
 import React from 'react';
 import '../../css/Games.css';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Outlet } from 'react-router-dom';
 import GamesNav from './GamesNav';
 import JKCatchApp from './jujutsu-kaisen/JKCatchApp';
 import MazeApp from './maze-game/MazeApp';
@@ -19,10 +19,11 @@ function Games() {
 
         <div className="games-view">
           <Routes>
-            <Route path="/" element={<JKCatchApp />} />
-            <Route path="/maze" element={<MazeApp />} />
-            <Route path="/lotto" element={<LottoApp />} />
+            <Route path="" element={<JKCatchApp />} />
+            <Route path="/games/maze" element={<MazeApp />} />
+            <Route path="/games/lotto" element={<LottoApp />} />
           </Routes>
+          <Outlet />
         </div>
       </div>
 

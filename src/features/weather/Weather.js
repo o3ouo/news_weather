@@ -16,7 +16,7 @@ function Weather() {
   useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
-        setLoaction({ 
+        setLoaction({
           lat: position.coords.latitude,
           lon: position.coords.longitude,
         });
@@ -24,18 +24,18 @@ function Weather() {
     }
   }, []);
 
-  const { 
-      activeWeatherData,
-      activeHourlyData,
-      todayTemperatureStats,
-      dailyRainProbability,
-      currentLoading,
-      hourlyLoading,
-      cityLoading,
-      currentError,
-      hourlyError,
-      cityError,
-    } = useWeather(location, city);
+  const {
+    activeWeatherData,
+    activeHourlyData,
+    todayTemperatureStats,
+    dailyRainProbability,
+    currentLoading,
+    hourlyLoading,
+    cityLoading,
+    currentError,
+    hourlyError,
+    cityError,
+  } = useWeather(location, city);
 
   // 로딩 및 에러 처리
   if (currentLoading || hourlyLoading || cityLoading) return <p>Loading weather information...</p>;
@@ -46,26 +46,28 @@ function Weather() {
 
   return (
     <div className="weather-wrap">
-      <h2 className="title">WEATHER FORECAST</h2>
-      <SearchBar setCity={setCity} />
-      {/* WeatherInfo 컴포넌트에 아이콘, 도시 이름, 날씨 설명, 온도, 최고/최저 기온 정보 전달 */}
-      <WeatherInfo 
-        currentData={activeWeatherData}
-        todayTemperatureStats={todayTemperatureStats}
-      />
-      {/* WeatherDatails 컴포넌트에 습도, 바람 속도, 강수 확률 정보 전달 */}
-      <WeatherDetails 
-        currentData={activeWeatherData}
-        dailyRainProbability={dailyRainProbability}
-      />
-      {/* Next 7 Days */}
-      <div className="days">
-        <p className="today">Today</p>
-        <button type='button' className="nextBtn">Next 7 Days &gt; </button>
+      <div className="inner">
+        <h2 className="title">WEATHER FORECAST</h2>
+        <SearchBar setCity={setCity} />
+        {/* WeatherInfo 컴포넌트에 아이콘, 도시 이름, 날씨 설명, 온도, 최고/최저 기온 정보 전달 */}
+        <WeatherInfo
+          currentData={activeWeatherData}
+          todayTemperatureStats={todayTemperatureStats}
+        />
+        {/* WeatherDatails 컴포넌트에 습도, 바람 속도, 강수 확률 정보 전달 */}
+        <WeatherDetails
+          currentData={activeWeatherData}
+          dailyRainProbability={dailyRainProbability}
+        />
+        {/* Next 7 Days */}
+        <div className="days">
+          <p className="today">Today</p>
+          <button type='button' className="nextBtn">Next 7 Days &gt; </button>
+        </div>
+
+        {/* HourlyForecast 컴포넌트에 시간대별 날씨와 아이콘 정보를 전달 */}
+        <HourlyForecast hourlyData={activeHourlyData} />
       </div>
-      
-      {/* HourlyForecast 컴포넌트에 시간대별 날씨와 아이콘 정보를 전달 */}
-      <HourlyForecast hourlyData={activeHourlyData} />
     </div>
   );
 }

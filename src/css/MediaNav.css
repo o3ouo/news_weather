@@ -1,17 +1,20 @@
 .media-nav {
   width: 100%;
-  padding: 0 28px;
   padding-top: 8px;
   background-color: rgba(112, 66, 20, .5);
 }
 
 .media-nav ul {
   display: flex;
+  max-width: 1024px;
+  margin: auto;
+  padding: 0 26px;
 }
 
 .media-nav li {
-  padding: 12px 16px;
+  width: 200px;
   font-family: "Newsreader-Bold";
+  font-size: 24px;
   color: rgba(244, 241, 234, .8);
 }
 
@@ -21,3 +24,51 @@
   background-color: #F4F1EA;
   color: #704214;
 } 
+
+.media-nav li a {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+
+  .media-nav ul {
+    gap: 8px;
+    max-width: 768px;
+    padding: 0 24px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .media-nav ul {
+    max-width: 480px;
+    margin: 0;
+    padding: 0 16px;
+  }
+  
+  .media-nav li {
+    width: 140px;
+  }
+
+  .media-nav li a {
+    padding: 12px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .media-nav ul {
+    gap: 0;
+    max-width: 320px;
+    padding: 0 14px;
+  }
+
+  .media-nav li {
+    width: auto;
+    font-size: 20px;
+  }
+  
+}

@@ -61,24 +61,25 @@ function JKCatchApp() {
           <p className="score"><span>Score:</span> {score}</p>
         </div>
 
-
-
         <div className="game-buttons">
-          {/* 게임 방법 팝업창 */}
-          <button type="button" className="how-to-paly" onClick={how}>How to <br/> Play</button>
+          <div className="btn-inner">
+            {/* 게임 방법 팝업창 */}
+            <button type="button" className="how-to-paly" onClick={how}>How to <br /> Play</button>
 
-          {/* 게임 시작 */}
-          <button type="button" className="play" onClick={startGame} disabled={gameRunning}>
-            {gameRunning ? "Game In Progress..." : "PLAY"}
-          </button>
-          {/* 게임 리셋 */}
-          <button type="button" className="reset" onClick={resetGame} disabled={gameRunning}>
-            RESET
-          </button>
-          {/* 게임 중단 */}
-          <button type="button" className="stop" onClick={stopGame} disabled={!gameRunning}>
-            STOP
-          </button>
+            {/* 게임 시작 */}
+            <button type="button" className="play" onClick={startGame} disabled={gameRunning}>
+              {gameRunning ? "Game In Progress..." : "PLAY"}
+            </button>
+            {/* 게임 리셋 */}
+            <button type="button" className="reset" onClick={resetGame} disabled={gameRunning}>
+              RESET
+            </button>
+            {/* 게임 중단 */}
+            <button type="button" className="stop" onClick={stopGame} disabled={!gameRunning}>
+              STOP
+            </button>
+          </div>
+
         </div>
 
         <CharacterBoard gameRunning={gameRunning} setScore={setScore} />

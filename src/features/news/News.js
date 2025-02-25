@@ -18,6 +18,7 @@ function News() {
       <NewsCategory onSelect={onSelect} currentTab={currentTab}/>
       <div className="line"></div>
       <NewsList category={category}/>
+      <button className="news-top-btn">↑</button>
     </div>
   );
 }

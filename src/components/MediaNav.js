@@ -7,7 +7,7 @@ function MediaNav() {
 
   const tabButton = [
     { link: '/', name: 'News' },
-    { link: '/weater', name: 'Weather' },
+    { link: '/weather', name: 'Weather' },
     { link: '/games', name: 'Mini game' },
   ];
 

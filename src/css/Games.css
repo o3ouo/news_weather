@@ -228,3 +228,30 @@ font-family: "Sue Ellen Francisco", serif; */
 .games-view {
   margin-top: 102px;
 }
+
+@media screen and (max-width: 1440px) {
+
+  .games-wrap {
+    max-width: 972px;
+    margin: 26px auto;
+  }
+
+  .games-view .jk-catch-wrap:last-child {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  .games-wrap {
+    max-width: 720px;
+    margin: 24px auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  .games-wrap {
+    max-width: 447px;
+  }
+}

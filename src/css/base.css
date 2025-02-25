@@ -347,11 +347,9 @@ sup {
 
 .media-wrap {
   display: none;
-  max-width: 1024px;
-  margin: auto;
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
+@media screen and (max-width: 1440px) {
 
   .wrap {
     display: none;
@@ -361,4 +359,22 @@ sup {
     display: block;
   }
 
+  .media-view {
+    padding: 0 26px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  .media-view {
+    padding: 0 24px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .media-view {
+    padding: 0 16px;
+  }
 }
