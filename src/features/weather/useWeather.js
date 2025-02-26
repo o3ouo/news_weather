@@ -25,10 +25,43 @@ export const useWeather = (location, city) => {
     enabled: !!city,
   });
 
+  // 도시 검색 날씨를 기반으로 위도/경도를 가져와서 시간대별 데이터 요청
+  const { data: cityHourlyData, error: cityHourlyError, isLoading: cityHourlyLoading } = useQuery({
+    queryKey: ["cityHourlyWeather", cityWeather?.coord?.lat, cityWeather?.coord?.lon],
+    queryFn: () => fetchHourlyWeather(cityWeather.coord.lat, cityWeather.coord.lon),
+    enabled: !!cityWeather?.coord?.lat && !!cityWeather?.coord?.lon,
+  });
+
   // 도시 검색 결과가 있으면 우선, 없으면 현재 위치 데이터를 사용
   const activeWeatherData = useMemo(() => cityWeather || currentData, [cityWeather, currentData]);
-  const activeHourlyData = useMemo(() => cityWeather || hourlyData, [cityWeather, hourlyData]);
+  const activeHourlyData = useMemo(() => cityHourlyData || hourlyData, [cityHourlyData, hourlyData]);
   
+  // 5일 동안의 최고/최저 온도 계산
+  const weeklyTemperatureStats = useMemo(() => {
+    if (!activeHourlyData?.list) return [];
+
+    // 날짜별 최고/최저 온도를 저장할 객체
+    const tempByDate = {};
+
+    activeHourlyData.list.forEach((hour) => {
+      const date = hour.dt_txt.split(" ")[0]; // YYYY-MM-DD 형식 추출
+      if (!tempByDate[date]) {
+        tempByDate[date] = { maxTemp: hour.main.temp, minTemp: hour.main.temp };
+      } else {
+        tempByDate[date].maxTemp = Math.max(tempByDate[date].maxTemp, hour.main.temp);
+        tempByDate[date].minTemp = Math.min(tempByDate[date].minTemp, hour.main.temp);
+      }
+    });
+
+    // 오늘 날짜 제외하고 5일치 데이터만 가져오기
+    const today = new Date().toISOString().split("T")[0];
+    return Object.entries(tempByDate)
+    .filter(([date]) => date !== today)
+    .slice(0, 5)
+    .map(([date, temps]) => ({ date, ...temps }));
+  }, [activeHourlyData]);
+
+
   // 오늘 날짜의 최고, 최저 기온 계산
   const todayTemperatureStats = useMemo(() => {
     if (!activeHourlyData?.list) return { maxTemp: 0, minTemp: 0 };
@@ -56,12 +89,15 @@ export const useWeather = (location, city) => {
     activeWeatherData,
     activeHourlyData,
     todayTemperatureStats,
+    weeklyTemperatureStats,
     dailyRainProbability,
     currentError,
     hourlyError,
     cityError,
+    cityHourlyError,
     currentLoading,
     hourlyLoading,
     cityLoading,
+    cityHourlyLoading,
   };
 };

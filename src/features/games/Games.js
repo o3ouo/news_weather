@@ -19,7 +19,7 @@ function Games() {
 
         <div className="games-view">
           <Routes>
-            <Route path="" element={<JKCatchApp />} />
+            <Route path="/" element={<JKCatchApp />} />
             <Route path="/games/maze" element={<MazeApp />} />
             <Route path="/games/lotto" element={<LottoApp />} />
           </Routes>

@@ -4,8 +4,6 @@ import HorizontalScroll from '../../components/HorizontalScroll';
 function HourlyForecast({ hourlyData }) {
   if (!hourlyData?.list) return <p>No hourly forecast available</p>;
 
-  console.log("hourlyData:", hourlyData);
-
   return (
     <div className="hourly-forecast">
       <HorizontalScroll>

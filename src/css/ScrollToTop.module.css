@@ -1,0 +1,21 @@
+.topBtn_wrap {
+  position: sticky;
+  bottom: 70px;
+  float: right;
+}
+
+.topBtn {
+  display: flex;
+  border: none;
+  font-size: 2rem;
+  color: #5C4033 !important;
+}
+
+@media screen and (max-width: 1440px) {
+
+  .topBtn_wrap {
+    width: fit-content;
+    left: 90%;
+    float: none;
+  }
+}
