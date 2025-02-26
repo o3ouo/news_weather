@@ -226,5 +226,26 @@
   .game-buttons .btn-inner {
     padding: 0 16px;
   }
+}
 
+@media screen and (max-width: 480px) {
+
+  .game-buttons .btn-inner {
+    flex-wrap: wrap;
+    width: auto;
+  }
+
+  .game-buttons button {
+    max-width: 45%;
+  }
+
+  .character-board {
+    margin-top: 140px;
+    grid-template-columns: repeat(3, 70px);
+  }
+
+  .character-hole {
+    width: 70px;
+    height: 70px;
+  }
 }

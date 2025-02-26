@@ -49,16 +49,20 @@ function Weather() {
       <div className="inner">
         <h2 className="title">WEATHER FORECAST</h2>
         <SearchBar setCity={setCity} />
-        {/* WeatherInfo 컴포넌트에 아이콘, 도시 이름, 날씨 설명, 온도, 최고/최저 기온 정보 전달 */}
-        <WeatherInfo
-          currentData={activeWeatherData}
-          todayTemperatureStats={todayTemperatureStats}
-        />
-        {/* WeatherDatails 컴포넌트에 습도, 바람 속도, 강수 확률 정보 전달 */}
-        <WeatherDetails
-          currentData={activeWeatherData}
-          dailyRainProbability={dailyRainProbability}
-        />
+
+        <div className="info-details-box">
+          {/* WeatherInfo 컴포넌트에 아이콘, 도시 이름, 날씨 설명, 온도, 최고/최저 기온 정보 전달 */}
+          <WeatherInfo
+            currentData={activeWeatherData}
+            todayTemperatureStats={todayTemperatureStats}
+          />
+          {/* WeatherDatails 컴포넌트에 습도, 바람 속도, 강수 확률 정보 전달 */}
+          <WeatherDetails
+            currentData={activeWeatherData}
+            dailyRainProbability={dailyRainProbability}
+          />
+        </div>
+
         {/* Next 7 Days */}
         <div className="days">
           <p className="today">Today</p>

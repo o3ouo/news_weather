@@ -7,8 +7,8 @@ const NewsList = ({ category }) => {
   const { data, isLoading, isError, error } = useProductQuery(category);
   console.log(data);
 
-  if (isLoading) return <h2 style={{margin: '16px auto'}}>Loading...</h2>
-  if (isError) return <h2 style={{margin: '16px auto'}}>{error.message}</h2>
+  if (isLoading) return <h2 style={{margin: '16px auto', padding: '16px'}}>Loading...</h2>
+  if (isError) return <h2 style={{margin: '16px auto',  padding: '16px'}}>{error.message}</h2>
 
   const article = data || [];
 

@@ -70,5 +70,8 @@
     width: auto;
     font-size: 20px;
   }
-  
+
+  .media-nav li a {
+    padding: 12px 12px;
+  }
 }

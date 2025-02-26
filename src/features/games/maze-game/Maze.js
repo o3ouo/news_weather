@@ -1,15 +1,22 @@
 import React, { useState, useEffect, useCallback } from "react";
 import Player from "./Player";
 import useMazeGenerator from "./useMazeGenerator";
+import useWindowDimensions from "../../../customHook/useWindowDimensions";
+
+
 
 // 현재 스테이지 정보와 플레이어가 출구에 도착하면 실행할 함수를 props로 받아옴
 export default function Maze({ stage, onWin }) {
+  // 디바이스 사이즈
+  const { width } = useWindowDimensions();
+  const desctop = width > 480;
+
   // 스테이지 제한
   const limitedStage = stage < 5;
 
   const rows = 11 + stage * 2;
   const cols = limitedStage ? (11 + stage * 2) : 19;
-  const sizeStyle = limitedStage ? `${35 - (stage * 4)}px` : "21px"
+  const sizeStyle = limitedStage && desctop ? `${35 - (stage * 4)}px` : "21px"
 
   // 호출해 랜덤 미로 생성
   const maze = useMazeGenerator(rows, cols); 

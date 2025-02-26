@@ -1,159 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Bubblegum+Sans&family=Caveat+Brush&family=Darumadrop+One&family=Delicious+Handrawn&family=Fuzzy+Bubbles:wght@400;700&family=Gemunu+Libre:wght@200..800&family=Gochi+Hand&family=Handlee&family=Hurricane&family=IM+Fell+Great+Primer+SC&family=Indie+Flower&family=Jersey+10&family=Jolly+Lodger&family=Julee&family=Knewave&family=Modak&family=Permanent+Marker&family=Press+Start+2P&family=Protest+Revolution&family=Reenie+Beanie&family=Rock+Salt&family=Sedgwick+Ave&family=Sedgwick+Ave+Display&family=Shadows+Into+Light&family=Sigmar&family=Silkscreen:wght@400;700&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Sue+Ellen+Francisco&family=Tiny5&family=VT323&display=swap');
-
-
-
-.sigmar-regular {
-  font-family: "Sigmar", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.shadows-into-light-regular {
-  font-family: "Shadows Into Light", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.permanent-marker-regular {
-  font-family: "Permanent Marker", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.indie-flower-regular {
-  font-family: "Indie Flower", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.darumadrop-one-regular {
-  font-family: "Darumadrop One", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.silkscreen-regular {
-  font-family: "Silkscreen", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.press-start-2p-regular {
-  font-family: "Press Start 2P", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.vt323-regular {
-  font-family: "VT323", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.reenie-beanie-regular {
-  font-family: "Reenie Beanie", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.handlee-regular {
-  font-family: "Handlee", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.rock-salt-regular {
-  font-family: "Rock Salt", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.caveat-brush-regular {
-  font-family: "Caveat Brush", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.gochi-hand-regular {
-  font-family: "Gochi Hand", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.julee-regular {
-  font-family: "Julee", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* .sour-gummy-<uniquifier> {
-  font-family: "Sour Gummy", serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
-} */
-
-.modak-regular {
-  font-family: "Modak", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.knewave-regular {
-  font-family: "Knewave", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.bubblegum-sans-regular {
-  font-family: "Bubblegum Sans", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.protest-revolution-regular {
-  font-family: "Protest Revolution", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.hurricane-regular {
-  font-family: "Hurricane", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.sedgwick-ave-regular {
-  font-family: "Sedgwick Ave", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.sue-ellen-francisco-regular {
-  font-family: "Sue Ellen Francisco", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.fuzzy-bubbles-regular {
-  font-family: "Fuzzy Bubbles", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-/* font-family: "Gochi Hand", serif;
-font-family: "Handlee", serif;
-font-family: "Bubblegum Sans", serif;
-font-family: "Protest Revolution", serif;
-font-family: "Sedgwick Ave", serif;
-font-family: "Sue Ellen Francisco", serif; */
-
-
-
-
-
-
 .games-wrap {
   position: relative;
   margin-top: 16px;
@@ -249,9 +93,32 @@ font-family: "Sue Ellen Francisco", serif; */
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
 
   .games-wrap {
     max-width: 447px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .games-wrap {
+    margin: 24px 14px;
+  }
+
+  .games-wrap h1 {
+    max-width: 250px;
+  }
+
+  .gameBtnBox ul {
+    flex-direction: column;
+  }
+
+  .gameBtnBox li {
+    width: 100%;
+  }
+
+  .games-view {
+    margin-top: 270px;
   }
 }

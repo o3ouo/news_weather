@@ -232,13 +232,13 @@ font-style: normal; */
 
 @font-face {
   font-family: "Newsreader-ExtraBold";
-  src: url(/public/font/Newsreader/static/Newsreader_60pt-ExtraBold.ttf);
+  src: url(/public/font/Newsreader/static/Newsreader_24pt-ExtraBold.ttf);
   font-style: normal;
 }
 
 @font-face {
   font-family: "Newsreader-Bold";
-  src: url(/public/font/Newsreader/static/Newsreader_60pt-Bold.ttf);
+  src: url(/public/font/Newsreader/static/Newsreader_24pt-Bold.ttf);
   font-style: normal;
 }
 
@@ -269,11 +269,15 @@ font-style: normal; */
   box-sizing: border-box;
 }
 
-/* html {
+html {
   -ms-overflow-style: none;
   scrollbar-width: none;
   overflow-y: scroll;
-} */
+}
+
+html::webkit-scrollbar {
+  display: none;
+}
 
 body {
   background-color: #F4F1EA ;
@@ -343,38 +347,4 @@ sup {
   font-family: "Barriecito";
   font-size: 40px;
   color: #F4F1EA;
-}
-
-.media-wrap {
-  display: none;
-}
-
-@media screen and (max-width: 1440px) {
-
-  .wrap {
-    display: none;
-  }
-
-  .media-wrap {
-    display: block;
-  }
-
-  .media-view {
-    padding: 0 26px;
-  }
-}
-
-@media screen and (max-width: 1024px) {
-
-  .media-view {
-    padding: 0 24px;
-  }
-}
-
-
-@media screen and (max-width: 768px) {
-
-  .media-view {
-    padding: 0 16px;
-  }
 }
