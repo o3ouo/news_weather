@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/github.io/news_weather/static/css/main.e93d957c.css",
+    "main.js": "/github.io/news_weather/static/js/main.a2b4f418.js",
+    "static/js/488.47f9a9df.chunk.js": "/github.io/news_weather/static/js/488.47f9a9df.chunk.js",
+    "static/media/Barriecito-Regular.ttf": "/github.io/news_weather/static/media/Barriecito-Regular.34e2c53bb0934420ce40.ttf",
+    "static/media/PlayfairDisplay-Bold.ttf": "/github.io/news_weather/static/media/PlayfairDisplay-Bold.a44ebc27b80d88dc868d.ttf",
+    "static/media/Roboto-Bold.ttf": "/github.io/news_weather/static/media/Roboto-Bold.cb02a42f24299e95adb5.ttf",
+    "static/media/Roboto-Medium.ttf": "/github.io/news_weather/static/media/Roboto-Medium.116fcd4fd987818c5d98.ttf",
+    "static/media/Roboto-Regular.ttf": "/github.io/news_weather/static/media/Roboto-Regular.5dd918926d41224c8142.ttf",
+    "static/media/gojo05.png": "/github.io/news_weather/static/media/gojo05.682b12ee5d2a7f219f55.png",
+    "static/media/Newsreader_24pt-Bold.ttf": "/github.io/news_weather/static/media/Newsreader_24pt-Bold.42ab27a191d474acbbf1.ttf",
+    "static/media/Newsreader_24pt-ExtraBold.ttf": "/github.io/news_weather/static/media/Newsreader_24pt-ExtraBold.4e40331aa1aa56099cf1.ttf",
+    "static/media/alt.jpg": "/github.io/news_weather/static/media/alt.6186a652f4e125be403e.jpg",
+    "static/media/LibreBarcode39-Regular.ttf": "/github.io/news_weather/static/media/LibreBarcode39-Regular.fe2f03ff6fac256f8e45.ttf",
+    "index.html": "/github.io/news_weather/index.html",
+    "main.e93d957c.css.map": "/github.io/news_weather/static/css/main.e93d957c.css.map",
+    "main.a2b4f418.js.map": "/github.io/news_weather/static/js/main.a2b4f418.js.map",
+    "488.47f9a9df.chunk.js.map": "/github.io/news_weather/static/js/488.47f9a9df.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e93d957c.css",
+    "static/js/main.a2b4f418.js"
+  ]
+}
