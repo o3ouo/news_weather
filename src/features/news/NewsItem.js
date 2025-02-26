@@ -10,7 +10,7 @@ function NewsItem({ article, isFirst }) {
 
   return (
     <article className={`news-item ${isFirst ? 'news-item-first' : ''}`}>
-        <a href={link} target='_blank' className="inner">
+        <a href={link} target='_blank'>
           <h2>{title}</h2>
           <figure className="news-img">
             <img src={imageSrc}  alt={title} />

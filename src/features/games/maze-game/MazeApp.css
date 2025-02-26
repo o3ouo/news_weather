@@ -87,3 +87,14 @@
   background-size: cover;
   background-color: #0086b6;
 }
+
+@media screen and (max-width: 480px) {
+  
+  .maze-wrap {
+    padding: 16px 0;
+  }
+
+  .maze-wrap .win-message {
+    font-size: 20px;
+  }
+}

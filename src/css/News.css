@@ -1,3 +1,15 @@
+/* img {
+  image-rendering: -moz-crisp-edges;
+  firefox
+  image-rendering: -o-crisp-edges;
+  opera
+  image-rendering: -webkit-optimize-contrast;
+  chrome
+  image-rendering: crisp-edges;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+} */
+
 .news-wrap figure {
   margin-bottom: 4px;
   border: 2px solid #5C4033;
@@ -38,7 +50,7 @@
   font-family: "Roboto-Bold";
   font-size: 16px;
   text-align: start;
-  color: #3B302F ;
+  color: #3B302F;
 }
 
 
@@ -61,7 +73,7 @@
   transition: .3s;
 }
 
-.news-list {
+.news-list .inner {
   max-width: 731px;
   display: flex;
   flex-direction: column;
@@ -76,6 +88,16 @@
   font-size: 32px;
 }
 
+.news-item .news-img {
+  width: 100%;
+}
+
+.news-item .news-img img {
+  width: 100%;
+  object-fit: cover;
+}
+
+
 .news-text {
   overflow: hidden;
   white-space: normal;
@@ -89,22 +111,13 @@
 /* 첫 번째 뉴스 */
 .news-item-first {
   max-width: 100%;
-}             
-
-.news-item-first img {
-  width: 731px;
 }
 
 /* 나머지 뉴스 */
 .news-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(auto, 357.5px));
   gap: 16px;
-  max-width: 731px;
-}
-
-.news-grid .news-item {
-  max-width: 357px;
 }
 
 .news-grid .news-item h2 {
@@ -117,7 +130,6 @@
 .news-top-btn {
   display: none;
 }
-
 
 @media screen and (max-width: 1440px) {
 
@@ -162,7 +174,7 @@
     background-color: rgba(112, 66, 20, .5);
   }
 
-  .news-list {
+  .news-list .inner {
     margin: auto;
     margin-top: 26px;
   }
@@ -188,9 +200,14 @@
   .news-category {
     padding: 0 24px;
   }
-  
-  .news-list {
+
+  .news-list .inner {
+    max-width: 720px;
     margin-top: 24px;
+  }
+
+  .news-grid {
+    grid-template-columns: repeat(auto-fit, minmax(auto, 352px));
   }
 }
 
@@ -201,6 +218,26 @@
   }
 
   .news-list {
-    margin: 16px;
+    margin: 0 16px;
+  }
+
+  .news-list .inner {
+    max-width: 448px;
+  }
+
+  .news-grid {
+    grid-template-columns: repeat(auto-fit, minmax(216px, auto));
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .news-list {
+    margin: 0 14px;
+  }
+
+  .news-item h2,
+  .news-grid .news-item h2 {
+    font-size: 24px;
   }
 }

@@ -9,14 +9,15 @@ import useWindowDimensions from "../../../customHook/useWindowDimensions";
 export default function Maze({ stage, onWin }) {
   // 디바이스 사이즈
   const { width } = useWindowDimensions();
-  const desctop = width > 480;
+  const mobile = width <= 480;
 
   // 스테이지 제한
   const limitedStage = stage < 5;
 
   const rows = 11 + stage * 2;
   const cols = limitedStage ? (11 + stage * 2) : 19;
-  const sizeStyle = limitedStage && desctop ? `${35 - (stage * 4)}px` : "21px"
+  const sizeStyle = limitedStage ? `${35 - (stage * 4)}px` : "21px";
+  const mediaStyle = mobile ? "15px" : sizeStyle; 
 
   // 호출해 랜덤 미로 생성
   const maze = useMazeGenerator(rows, cols); 
@@ -69,7 +70,7 @@ export default function Maze({ stage, onWin }) {
       {maze.map((row, y) => (
         <div key={y} className="maze-row">
           {row.map((cell, x) => (
-            <div key={x} className={`maze-cell ${cell === 1 ? "wall" : ""} ${cell === "E" ? "exit" : ""}`} style={{width: sizeStyle, height: sizeStyle}}>
+            <div key={x} className={`maze-cell ${cell === 1 ? "wall" : ""} ${cell === "E" ? "exit" : ""}`} style={{width: mediaStyle, height: mediaStyle}}>
               {playerPos.x === x && playerPos.y === y && <Player />}
             </div>
           ))}

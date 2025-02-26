@@ -251,7 +251,7 @@ sup {
   }
 
   .weather-wrap .inner {
-    margin-top: auto;
+    padding: 0;
     background-color: #F4F1EA;
   }
 
