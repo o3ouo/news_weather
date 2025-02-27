@@ -253,6 +253,10 @@
     height: 80px;
   }
 
+  .popup .closeBtn {
+    margin-top: 24px;
+  }
+
   .popup {
     padding: 0 14px;
   }
