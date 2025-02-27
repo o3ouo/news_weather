@@ -17,7 +17,7 @@ function SearchBar({ setCity }) {
     <div className="search-bar">
       {/* 입력 시 setCity를 업데이트 */}
       <figure className="search-icon">
-        <img src="/icon/search.png" alt="search-icon" />
+        <img src={`${process.env.PUBLIC_URL}/icon/search.png`} alt="search-icon" />
       </figure>
       <input 
         type="text" 

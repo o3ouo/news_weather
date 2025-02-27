@@ -10,10 +10,10 @@ function Games() {
   return (
       <div className="games-wrap">
         <figure className="bg">
-          <img src="/img/noise-bg.jpg" alt="noise-bg" />
+          <img src={`${process.env.PUBLIC_URL}/img/noise-bg.jpg`} alt="noise-bg" />
         </figure>
         <h1>
-          <img src="/img/jujutsu_kaisen_logo.png" alt="jujutsu_kaisen_logo" />
+          <img src={`${process.env.PUBLIC_URL}/img/jujutsu_kaisen_logo.png`} alt="jujutsu_kaisen_logo" />
         </h1>
         <GamesNav />
 

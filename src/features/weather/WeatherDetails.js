@@ -10,7 +10,7 @@ function WeatherDetails({ currentData, dailyRainProbability }) {
       {/* 강수 정보 */}
       <div className="rain-wrap con">
         <figure className="rain-icon">
-          <img src="/icon/rain.png" alt="rain-icon" />
+          <img src={`${process.env.PUBLIC_URL}/icon/rain.png`} alt="rain-icon" />
         </figure>
         <div className="text">
           <p className="name">RAIN</p>
@@ -20,7 +20,7 @@ function WeatherDetails({ currentData, dailyRainProbability }) {
       {/* 습도 정보 */}
       <div className="hum-wrap con">
         <figure className="hum-icon">
-          <img src="/icon/hum.png" alt="humidity-icon" />
+          <img src={`${process.env.PUBLIC_URL}/icon/hum.png`} alt="humidity-icon" />
         </figure>
         <div className="text">
           <p className="name">HUM</p>
@@ -30,7 +30,7 @@ function WeatherDetails({ currentData, dailyRainProbability }) {
       {/* 바람 정보 */}
       <div className="wind-wrap con">
         <figure className="wind-icon">
-          <img src="/icon/wind.png" alt="wind-icon" />
+          <img src={`${process.env.PUBLIC_URL}/icon/wind.png`} alt="wind-icon" />
         </figure>
         <div className="text">
           <p className="name">WIND</p>

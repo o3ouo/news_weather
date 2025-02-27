@@ -53,7 +53,7 @@ function JKCatchApp() {
   return (
     <div className="jk-catch-wrap">
       <figure className="bg">
-        <img src="/img/bg-img.png" alt="bg" />
+        <img src={`${process.env.PUBLIC_URL}/img/bg-img.png`} alt="bg" />
       </figure>
       <div className="inner">
         <div className="info">

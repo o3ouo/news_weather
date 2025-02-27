@@ -1,9 +1,11 @@
+@import url("https://use.typekit.net/uym5qpg.css");
+
 .games-wrap {
   position: relative;
   margin-top: 16px;
   border: 4px solid #5C4033;
   background-color: rgba(112, 66, 20 .5);
-  font-family: "ccmeanwhile", sans-serif;
+  font-family: "ccmeanwhile";
   font-style: italic;
 }
 
@@ -46,7 +48,7 @@
   height: 70px;
   box-shadow: 3px 3px 3px black;
   background-color: #5C4033;
-  font-family: "ccmeanwhile", sans-serif;
+  font-family: "ccmeanwhile";
   font-weight: 700;
   font-size: 14px;
   line-height: 160%;

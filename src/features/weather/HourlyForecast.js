@@ -14,7 +14,7 @@ function HourlyForecast({ hourlyData }) {
               <p className="time">{hour.dt_txt.substring(11, 16)}</p>
               <figure className="time-icon">
                 {/* 시간대별 날씨 아이콘 */}
-                <img src={`/icon/${hour.weather[0].icon}.png`} alt={hour.dt_txt} />
+                <img src={`${process.env.PUBLIC_URL}/icon/${hour.weather[0].icon}.png`} alt={hour.dt_txt} />
               </figure>
               <p className="celsius">{Math.round(hour.main.temp)}℃</p>
             </li>

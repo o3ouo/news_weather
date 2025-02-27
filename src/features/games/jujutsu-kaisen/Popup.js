@@ -11,7 +11,7 @@ export default function Popup({ setOpenPopup }) {
     <div className="popup-bg">
       <div className="popup">
         <figure className="pop-img">
-          <img src="/img/jujutsu_kaisen_logo.png" alt="game-logo" />
+          <img src={`${process.env.PUBLIC_URL}/img/jujutsu_kaisen_logo.png`} alt="game-logo" />
         </figure>
 
         <div className="pop-text">
@@ -23,40 +23,40 @@ export default function Popup({ setOpenPopup }) {
             <div className="score-box">
               <span>5점</span>
               <figure>
-                <img src="/img/gojo01.png" alt="gojo" />
+                <img src={`${process.env.PUBLIC_URL}/img/gojo01.png`} alt="gojo" />
               </figure>
             </div>
             <div className="score-box">
               <span>4점</span>  
               <figure>
-                <img src="/img/yuta01.png" alt="yuta" />
+                <img src={`${process.env.PUBLIC_URL}/img/yuta01.png`} alt="yuta" />
               </figure>
               <figure>
-                <img src="/img/toge01.png" alt="toge" />
+                <img src={`${process.env.PUBLIC_URL}/img/toge01.png`} alt="toge" />
               </figure>
             </div>
             <div className="score-box">
               <span>3점</span>
               <figure>
-                <img src="/img/maki01.png" alt="maki" />
+                <img src={`${process.env.PUBLIC_URL}/img/maki01.png`} alt="maki" />
               </figure>
               <figure>
-                <img src="/img/panda01.png" alt="panda" />
+                <img src={`${process.env.PUBLIC_URL}/img/panda01.png`} alt="panda" />
               </figure>
             </div>
             <div className="score-box">
               <span>2점</span>
               <figure>
-                <img src="/img/yuji01.png" alt="yuji" />
+                <img src={`${process.env.PUBLIC_URL}/img/yuji01.png`} alt="yuji" />
               </figure>
               <figure>
-                <img src="/img/megumi01.png" alt="megumi" />
+                <img src={`${process.env.PUBLIC_URL}/img/megumi01.png`} alt="megumi" />
               </figure>
             </div>
             <div className="score-box">
               <span>1점</span>
               <figure>
-                <img src="/img/nobara01.png" alt="nobara" />
+                <img src={`${process.env.PUBLIC_URL}/img/nobara01.png`} alt="nobara" />
               </figure>
             </div>
 

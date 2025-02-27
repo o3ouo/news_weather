@@ -14,7 +14,7 @@ function WeatherInfo({ currentData, todayTemperatureStats }) {
         <p className="w-condition">{weatherMain}</p>
       </div>
       <figure className="weather-icon">
-        <img src={ `/icon/${weather[0].icon}.png`} alt={weatherMain} />
+        <img src={ `${process.env.PUBLIC_URL}/icon/${weather[0].icon}.png`} alt={weatherMain} />
       </figure>
       <div className="right">
         <div className="h-l">

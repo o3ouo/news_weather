@@ -6,7 +6,7 @@ function Character({ character, onClick}) {
       {character ? (
         <img 
           className={`character ${character.name}`}  
-          src={character.img_url}
+          src={`${process.env.PUBLIC_URL}${character.img_url}`}
           alt={character.name}
         />
       ) : null}
