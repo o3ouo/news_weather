@@ -9,7 +9,7 @@ function App() {
   const isTablet = width <= 1440;
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         {isTablet ? <MediaHome /> : <Home />}
       </div>
