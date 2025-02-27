@@ -226,6 +226,10 @@
   .game-buttons .btn-inner {
     padding: 0 16px;
   }
+
+  .popup {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -247,5 +251,9 @@
   .character-hole {
     width: 80px;
     height: 80px;
+  }
+
+  .popup {
+    padding: 0 14px;
   }
 }
