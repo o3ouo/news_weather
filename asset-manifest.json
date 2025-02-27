@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/news_weather/static/css/main.466ae2e3.css",
-    "main.js": "/news_weather/static/js/main.0b6ab6a4.js",
+    "main.js": "/news_weather/static/js/main.373dd34c.js",
     "static/js/488.47f9a9df.chunk.js": "/news_weather/static/js/488.47f9a9df.chunk.js",
     "static/media/Barriecito-Regular.ttf": "/news_weather/static/media/Barriecito-Regular.34e2c53bb0934420ce40.ttf",
     "static/media/PlayfairDisplay-Bold.ttf": "/news_weather/static/media/PlayfairDisplay-Bold.a44ebc27b80d88dc868d.ttf",
@@ -15,11 +15,11 @@
     "static/media/LibreBarcode39-Regular.ttf": "/news_weather/static/media/LibreBarcode39-Regular.fe2f03ff6fac256f8e45.ttf",
     "index.html": "/news_weather/index.html",
     "main.466ae2e3.css.map": "/news_weather/static/css/main.466ae2e3.css.map",
-    "main.0b6ab6a4.js.map": "/news_weather/static/js/main.0b6ab6a4.js.map",
+    "main.373dd34c.js.map": "/news_weather/static/js/main.373dd34c.js.map",
     "488.47f9a9df.chunk.js.map": "/news_weather/static/js/488.47f9a9df.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.466ae2e3.css",
-    "static/js/main.0b6ab6a4.js"
+    "static/js/main.373dd34c.js"
   ]
 }
