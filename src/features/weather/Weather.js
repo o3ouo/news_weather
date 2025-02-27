@@ -28,9 +28,8 @@ function Weather() {
   const {
     activeWeatherData,
     activeHourlyData,
-    todayTemperatureStats,
     dailyRainProbability,
-    weeklyTemperatureStats,
+    sixDayWeatherStats,
     currentLoading,
     hourlyLoading,
     cityLoading,
@@ -50,7 +49,7 @@ function Weather() {
   return (
     <div className="weather-wrap">
       <motion.div
-        className="weekly-card-box"
+        className="card-box"
         initial={{ rotateY: "0deg" }}
         animate={{ rotateY: showWeekly ? "180deg" : "0deg" }}
         transition={{ duration: 0.3 }}
@@ -61,7 +60,7 @@ function Weather() {
             <WeatherForecast
               setCity={setCity}
               activeWeatherData={activeWeatherData}
-              todayTemperatureStats={todayTemperatureStats}
+              sixDayWeatherStats={sixDayWeatherStats}
               dailyRainProbability={dailyRainProbability}
               setShowWeekly={setShowWeekly}
               activeHourlyData={activeHourlyData}
@@ -71,7 +70,7 @@ function Weather() {
           <div className="weekly-content">
             {/* 5일 간의 최고 최저 기온 */}
             < WeeklyForecast
-              weeklyTemperatureStats={weeklyTemperatureStats}
+              sixDayWeatherStats={sixDayWeatherStats}
               setCity={setCity}
               setShowWeekly={setShowWeekly}
             />

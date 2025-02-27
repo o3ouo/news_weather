@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .weather-wrap {
   position: relative;
   max-width: 600px;
@@ -5,7 +12,7 @@
   perspective: 1000px; /* 3D 효과를 위한 원근법 설정*/
 }
 
-.weekly-card-box {
+.card-box {
   position: relative;
   transform-style: preserve-3d;
   transition: transform .3s;
@@ -15,22 +22,6 @@
 
 .weekly-content {
   transform: rotateY(180deg); /* Weekly forecast는 카드 뒤에 위치하도록 설정 */
-}
-
-.prevBtn {
-  margin-top: 15px;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  font-size: 14px;
-  background-color: #007bff;
-  color: white;
-  border-radius: 5px;
-  z-index: 10;
-}
-
-.prevBtn:hover {
-  background-color: #0056b3;
 }
 
 .weather-wrap .inner {
@@ -186,6 +177,49 @@ sup {
   margin: 2px 0;
 } 
 
+/* weekly-forecast */
+.weekly-content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding: 32px 14px;
+  text-align: center;
+} 
+
+.weekly-content ul li {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  font-family: 'DungGeunMo';
+  font-size: 18px;
+}
+
+.weekly-content .week {
+
+}
+
+.prevBtn {
+  display: block;
+  margin: 16px auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(92, 64, 51, .5);
+  font-family: "Playfair Display-Bold";
+  font-size: 14px;
+  color: #3B302F;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prevBtn:hover {
+  background-color: #5C4033;
+  color: #F4F1EA;
+}
+
+
+
+
 @media screen and (max-width: 1440px) {
 
   .weather-wrap .inner {
@@ -338,3 +372,4 @@ sup {
     filter: contrast(.5);
   }
 }
+

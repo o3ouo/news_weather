@@ -1,8 +1,11 @@
 import React from 'react';
 
-function WeatherInfo({ currentData, todayTemperatureStats }) {
+function WeatherInfo({ currentData, sixDayWeatherStats }) {
+
+  console.log("info:", sixDayWeatherStats)
   if (!currentData) return <p>No weather data available</p>;
 
+  console.log("currentData:",currentData)
   // currentData에서 필요한 정보를 구조 분해
   const { name, main, weather } = currentData;
   const weatherMain = weather[0].main;
@@ -18,8 +21,8 @@ function WeatherInfo({ currentData, todayTemperatureStats }) {
       </figure>
       <div className="right">
         <div className="h-l">
-          <span className="h">H: {todayTemperatureStats.maxTemp}°</span>
-          <span className="l">L: {todayTemperatureStats.minTemp}°</span>
+          <span className="h">H: {sixDayWeatherStats.maxTemp}°</span>
+          <span className="l">L: {sixDayWeatherStats.minTemp}°</span>
         </div>
         <div className="temperature">
           <p className="c">{Math.round(main.temp)}<sup>℃</sup></p>
