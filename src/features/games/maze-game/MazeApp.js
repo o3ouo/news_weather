@@ -18,7 +18,7 @@ export default function App() {
           <p className="win-message">🌠 STAGE{stage} <span>CLEAR!</span> 🌠</p>
           <button type="button" className="next-button" onClick={nextStage}>Next Stage &gt;</button>
           <figure className="clear-img">
-            <img src="/img/clear-img.png" alt="clear-img" />
+            <img src={`${process.env.PUBLIC_URL}/img/clear-img.png`} alt="clear-img" />
           </figure>
         </div>
       ) : (

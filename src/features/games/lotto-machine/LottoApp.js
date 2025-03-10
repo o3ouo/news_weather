@@ -5,7 +5,6 @@ import Ball from './Ball';
 const getWinNumbers = () => {
   // 로또 번호 생성
   const balls = Array(45).fill().map((v, i) => i + 1);
-
   const shuffle = []; // 섞은 번호를 담을 빈 그릇
 
   while (balls.length > 0) {
@@ -19,9 +18,8 @@ const getWinNumbers = () => {
 }
 
 function LottoApp() {
-  // const lottoNumbers = useMemo(() => getWinNumbers(), []); 
-  // const [winNumbers, setWinNumbers] = useState(lottoNumbers); // 미리 뽑아둔 숫자를 가져옴
-  const [winNumbers, setWinNumbers] = useState([]);
+  const lottoNumbers = useMemo(() => getWinNumbers(), []); 
+  const [winNumbers, setWinNumbers] = useState(lottoNumbers); // 미리 뽑아둔 숫자를 가져옴
   const [winBalls, setWinBalls] = useState([]); // 선택된 숫자 모음
   const [bonus, setBonus] = useState(null); // 보너스 숫자
   const [redo, setRedo] = useState(false); // 재실행
@@ -45,6 +43,7 @@ function LottoApp() {
         setWinBalls((prev) => [...prev, newNumbers[i]]);
       }, (i + 1) * 1000);
     }
+
     timeouts.current[6] = setTimeout(() => {
       setBonus(newNumbers[6]);
       setRedo(true);
@@ -54,6 +53,7 @@ function LottoApp() {
   }, [isRunning]);
 
   useEffect(() => {
+    startGame(); // 자동 실행
     return () => {
       timeouts.current.forEach((v) => clearTimeout(v));
     };
@@ -63,11 +63,7 @@ function LottoApp() {
     <div className="lotto-wrap">
       <div className="inner">
         <h2>Lotto Machine</h2>
-        {!redo ? (
-          <button onClick={startGame} disabled={isRunning} className='start'>Start</button>
-        ) : (
-          <button onClick={startGame} disabled={isRunning} className='redo'>Redo</button>
-        )}
+        <button onClick={startGame} disabled={isRunning} className="redo">Redo</button>
         <div className="numbers">
           {winBalls.map((v) => (
             <Ball key={v} number={v} />
@@ -77,12 +73,8 @@ function LottoApp() {
           {!redo ? "" : <h2>Bonus</h2>}
           {bonus && <Ball key={bonus} number={bonus} />}
         </div>
-
-
         <div className="history">
-          {!redo ? (
-            ""
-          ) : (
+          {redo && (
             <>
               <h2>History</h2>
               <ul className='history-box'>
@@ -92,7 +84,6 @@ function LottoApp() {
               </ul>
             </>
           )}
-
         </div>
       </div>
     </div>

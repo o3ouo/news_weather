@@ -35,8 +35,8 @@
 }
 
 .lotto-wrap button:hover {
-  margin-top: 5px;
-  margin-left: 5px;
+  margin-top: 30px;
+  margin-left: 10px;
   box-shadow: none;
 }
 
@@ -55,6 +55,10 @@
   padding-top: 8px;
   font-size: 24px;
   border-radius: 100%;
+  box-shadow: 
+    inset -5px 0px 30px 0 rgba(128, 128, 128, .3),
+    inset -5px 0 30px 0 rgba(17, 17, 17, .3),
+    inset 0 0 14px 0 rgba(255, 255, 255, .3);
 }
 
 .lotto-wrap .bonus {
@@ -97,5 +101,12 @@
 @media screen and (max-width: 1024px) {
   .lotto-wrap .numbers {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .lotto-wrap .ball {
+    width: 70px;
+    height: 70px;
   }
 }
